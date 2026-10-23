@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('index.html', titulo='Inicio', mensaje='Bienvenido a mi website de UDL-ICO!')
 
@@ -19,4 +19,4 @@ def productos():
     return render_template('productos.html', titulo='Productos', mensaje='Bienvenido a la página de productos de UDL-ICO!')
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5051)
+    app.run(debug=True,port=5050)
