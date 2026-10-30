@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+    --cempasuchil-orange: #ff7b00;
+    --spooky-purple: #2b1055;
+    --dark-bg: #0f0a18;
+    --card-bg: #1a1228;
+    --gold-accent: #f4c430;
+    --text-light: #e6e1f0;
+    --text-muted: #a89ec1;
+    --border-color: #3f2275;
+}
+
+/* Fondo Global y Tipografía Base */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+    /* Patrón sutil estilo altar/místico */
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255, 123, 0, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 85% 90%, rgba(43, 16, 85, 0.4) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* Contenedor Principal */
+.container-fluid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Navbar (Sobrescribiendo la barra de Bootstrap) */
+.navbar {
+    background: linear-gradient(135deg, var(--spooky-purple) 0%, #15082d 100%) !important;
+    border-bottom: 2px solid var(--cempasuchil-orange);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 123, 0, 0.2);
+    border-radius: 0 0 12px 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--cempasuchil-orange) !important;
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(ff, 123, 0, 0.3);
+}
+
+.nav-link {
+    font-family: 'Cinzel', serif;
+    color: var(--text-light) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold-accent) !important;
+    text-shadow: 0 0 8px rgba(244, 196, 48, 0.6);
+    transform: translateY(-1px);
+}
+
+.navbar-toggler {
+    border: 1px solid var(--cempasuchil-orange) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(60%) sepia(90%) saturate(1500%) hue-rotate(360deg);
+}
+
+/* Encabezados y Títulos */
+h1 {
+    font-family: 'Cinzel', serif;
+    color: var(--cempasuchil-orange);
+    font-weight: 900;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold-accent);
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.4rem;
+}
+
+/* Párrafos e Información */
+p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Párrafo del mensaje dinámico / destacado */
+div.container-fluid > p:first-of-type {
+    background: var(--card-bg);
+    border-left: 4px solid var(--cempasuchil-orange);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0 8px 8px 0;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Bloques de lista de ítems (Libros, Servicios, Horarios, etc.) */
+div.container-fluid > p:not(:first-of-type) {
+    background: rgba(26, 18, 40, 0.6);
+    border: 1px solid rgba(63, 34, 117, 0.5);
+    border-radius: 6px;
+    padding: 0.85rem 1.2rem;
+    transition: all 0.25s ease;
+}
+
+div.container-fluid > p:not(:first-of-type):hover {
+    border-color: var(--cempasuchil-orange);
+    background: rgba(43, 16, 85, 0.5);
+    transform: translateX(4px);
+}
